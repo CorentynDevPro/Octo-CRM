@@ -1,4 +1,4 @@
-import { computed } from 'vue'
+
 import type { Permission } from '@octo-crm/constants'
 
 /** Minimal permissions composable — expects user permissions to be provided */
@@ -15,9 +15,5 @@ export function usePermissions(userPermissions: () => Permission[]) {
     return permissions.every((p) => can(p))
   }
 
-  return {
-    can: computed(() => can),
-    canAny: computed(() => canAny),
-    canAll: computed(() => canAll),
-  }
+  return { can, canAny, canAll }
 }

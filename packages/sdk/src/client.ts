@@ -21,7 +21,7 @@ export class OctoCrmClient {
       ...options,
       headers: {
         ...(token ? { Authorization: `Bearer ${token}` } : {}),
-        ...(options.headers as Record<string, string> ?? {}),
+        ...((options.headers as Record<string, string> | undefined) ?? {}),
       },
       onResponseError: ({ response }) => {
         if (response.status === 401) {

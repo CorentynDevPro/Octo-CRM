@@ -13,7 +13,7 @@ const toasts = ref<Toast[]>([])
 
 export function useToast() {
   function show(message: string, type: ToastType = 'info', duration = 4000) {
-    const id = Math.random().toString(36).slice(2)
+    const id = crypto.randomUUID()
     toasts.value.push({ id, type, message, duration })
     if (duration > 0) {
       setTimeout(() => dismiss(id), duration)

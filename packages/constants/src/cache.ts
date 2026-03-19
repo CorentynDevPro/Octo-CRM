@@ -1,9 +1,9 @@
 export const CACHE_TTL = {
-  SHORT: 60,          // 1 minute
-  MEDIUM: 300,        // 5 minutes
-  LONG: 3600,         // 1 hour
-  DAY: 86400,         // 24 hours
-  WEEK: 604800,       // 7 days
+  SHORT: 60,
+  MEDIUM: 5 * 60,
+  LONG: 60 * 60,
+  DAY: 24 * 60 * 60,
+  WEEK: 7 * 24 * 60 * 60,
 } as const
 
 export const CACHE_KEYS = {
