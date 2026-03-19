@@ -10,7 +10,7 @@
     "test": "vitest run"
   },
   "dependencies": {
-    "fastify": "^4.26.0",
+    "fastify": "^5.7.2",
     "@octo-crm/types": "workspace:*"
   },
   "devDependencies": {
