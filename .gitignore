@@ -137,3 +137,42 @@ dist
 # Vite logs files
 vite.config.js.timestamp-*
 vite.config.ts.timestamp-*
+
+# TurboRepo
+.turbo
+
+# Build outputs
+.nuxt
+.output
+dist
+build
+.next
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# Prisma
+prisma/migrations/dev.db
+
+# Generated
+*.generated.ts
+*.generated.js
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.idea
+*.iml
+.vscode
+
+# Docker volumes
+infrastructure/docker/volumes/
+
+# Terraform state
+infrastructure/terraform/.terraform
+infrastructure/terraform/*.tfstate
+infrastructure/terraform/*.tfstate.backup
