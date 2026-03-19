@@ -4,7 +4,10 @@ import rateLimit from '@fastify/rate-limit'
 
 const app = Fastify({ logger: true })
 
-await app.register(cors, { origin: true })
+await app.register(cors, {
+  // TODO: restrict to trusted domains in production via ALLOWED_ORIGINS env var
+  origin: process.env.ALLOWED_ORIGINS?.split(',') ?? true,
+})
 await app.register(rateLimit, { max: 100, timeWindow: '1 minute' })
 
 app.get('/health', async () => ({

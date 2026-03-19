@@ -21,6 +21,7 @@ services:
   redis:
     image: redis:7-alpine
     container_name: octo-crm-redis
+    # No password for local dev — set REDIS_PASSWORD in production
     command: redis-server --requirepass ""
     ports:
       - "6379:6379"
