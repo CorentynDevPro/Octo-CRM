@@ -1,0 +1,21 @@
+{
+  "name": "@octo-crm/analytics-service",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Analytics microservice",
+  "scripts": {
+    "dev": "node --watch src/index.js",
+    "build": "tsc -p tsconfig.json",
+    "start": "node dist/index.js",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "fastify": "^4.26.0",
+    "@octo-crm/types": "workspace:*"
+  },
+  "devDependencies": {
+    "typescript": "^5.4.0",
+    "vitest": "^1.4.0",
+    "@octo-crm/config": "workspace:*"
+  }
+}
