@@ -1,0 +1,4 @@
+{
+  "extends": "@octo-crm/config/tsconfig",
+  "include": ["src"]
+}
