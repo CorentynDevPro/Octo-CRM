@@ -1,0 +1,14 @@
+{
+  "name": "@octo-crm/database",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Database schemas, migrations, seeds, and utilities",
+  "scripts": {
+    "db:migrate": "node scripts/migrate.js",
+    "db:seed": "node scripts/seed.js",
+    "db:reset": "node scripts/reset.js"
+  },
+  "devDependencies": {
+    "typescript": "^5.4.0"
+  }
+}
