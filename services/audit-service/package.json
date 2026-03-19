@@ -4,7 +4,7 @@
   "private": true,
   "description": "Audit log microservice",
   "scripts": {
-    "dev": "node --watch src/index.js",
+    "dev": "tsx watch src/index.ts",
     "build": "tsc -p tsconfig.json",
     "start": "node dist/index.js",
     "test": "vitest run"
@@ -15,6 +15,7 @@
   },
   "devDependencies": {
     "typescript": "^5.4.0",
+    "tsx": "^4.7.0",
     "vitest": "^1.4.0",
     "@octo-crm/config": "workspace:*"
   }

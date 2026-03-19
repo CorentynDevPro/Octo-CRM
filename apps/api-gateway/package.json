@@ -2,6 +2,7 @@
   "name": "@octo-crm/api-gateway",
   "version": "1.0.0",
   "private": true,
+  "type": "module",
   "description": "API Gateway — BFF, routing, rate-limiting, auth middleware",
   "scripts": {
     "dev": "tsx watch src/index.ts",
