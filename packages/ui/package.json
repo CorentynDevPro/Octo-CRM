@@ -4,6 +4,7 @@
   "private": true,
   "description": "Design system — Tailwind + Vue components",
   "main": "./src/index.ts",
+  "type": "module",
   "exports": {
     ".": "./src/index.ts",
     "./tailwind": "./tailwind.config.ts"
