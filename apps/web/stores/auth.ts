@@ -1,27 +1,40 @@
-import { defineStore } from 'pinia'
-import { ref, computed } from 'vue'
+import { defineStore } from "pinia";
+import { ref, computed } from "vue";
 
-export const useAuthStore = defineStore('auth', () => {
-  const token        = ref<string | null>(null)
-  const refreshToken = ref<string | null>(null)
-  const user         = ref<{ id: string; email: string; name: string; role: string } | null>(null)
+export const useAuthStore = defineStore("auth", () => {
+  const token = ref<string | null>(null);
+  const refreshToken = ref<string | null>(null);
+  const user = ref<{
+    id: string;
+    email: string;
+    name: string;
+    role: string;
+  } | null>(null);
 
-  const isAuthenticated = computed(() => !!token.value)
+  const isAuthenticated = computed(() => !!token.value);
 
   function setTokens(access: string, refresh: string) {
-    token.value        = access
-    refreshToken.value = refresh
+    token.value = access;
+    refreshToken.value = refresh;
   }
 
   function setUser(u: typeof user.value) {
-    user.value = u
+    user.value = u;
   }
 
   function logout() {
-    token.value        = null
-    refreshToken.value = null
-    user.value         = null
+    token.value = null;
+    refreshToken.value = null;
+    user.value = null;
   }
 
-  return { token, refreshToken, user, isAuthenticated, setTokens, setUser, logout }
-})
+  return {
+    token,
+    refreshToken,
+    user,
+    isAuthenticated,
+    setTokens,
+    setUser,
+    logout,
+  };
+});

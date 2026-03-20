@@ -1,5 +1,13 @@
 export default defineNuxtConfig({
-  devtools: { enabled: true },
+  compatibilityDate: '2025-01-01',
+  telemetry: false,
+  devtools: {
+    enabled: true,
+
+    timeline: {
+      enabled: true,
+    },
+  },
   modules: ['@pinia/nuxt', '@nuxtjs/tailwindcss'],
   tailwindcss: {
     configPath: '../../packages/ui/tailwind.config.ts',
